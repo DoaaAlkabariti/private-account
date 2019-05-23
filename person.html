@@ -69,429 +69,441 @@
 
           }
           /* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  direction:  rtl;
-}
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        direction:  rtl;
+        width: 600px;
+      }
 
-/* Style the buttons inside the tab */
-.tab button {
-  /* background-color: inherit; */
-  /* background-color: rgb(255, 193, 7); */
-  float: right;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
+      /* Style the buttons inside the tab */
+      .tab button {
+        /* background-color: inherit; */
+        /* background-color: rgb(255, 193, 7); */
+        float: right;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-.m-r-20{
-  margin-right: 20px;
-}
-.p-t-15{
-  padding-top: 15px;
-}
-.relative{
-  position: relative;
-}
-.timeline {
-  position: relative;
-  margin: 50px;
-  padding: 0;
-  list-style: none;
-  counter-reset: section;
-}
-.timeline:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #fdb839;
-  left: 32px;
-  margin: 0;
-  border-radius: 2px;
-}
-.timeline > li {
-  position: relative;
-  margin-right: 10px;
-  margin-bottom: 50px;
-  padding-top: 18px;
-  box-sizing: border-box;
-}
-.timeline > li:before,
-.timeline > li:after {
-  display: block;
-}
-.ui-sortable-helper {
-  box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.08);
-  background: #fff;
-}
-.ui-sortable-helper .handle {
-  display: none;
-}
-.timeline > li:not(.ui-sortable-helper):before {
-  counter-increment: section;
-  content: counter(section);
-  background: #fdb839;
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  border-radius: 50%;
-  left: -1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #Fff;
-  font-size: 22px;
-  font-weight: bold;
-  border: 15px solid #fff;
-  box-sizing: border-box;
-}
-.timeline > li:after {
-  clear: both;
-}
-.timeline > li > .timeline-item {
-  margin-top: 0;
-  color: #444;
-  margin-left: 60px;
-  margin-right: 15px;
-  padding: 0;
-}
-.timeline > li > .fa,
-.timeline > li > .glyphicon,
-.timeline > li > .ion {
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-  line-height: 30px;
-  position: absolute;
-  color: #fff;
-  background: #fdb839;
-  border-radius: 50%;
-  text-align: center;
-  left: 18px;
-  top: 0;
-}
-.radio-thumbnail > label {
-  border-radius: 4px;
-}
-.radio-thumbnail > input {
-  display: none;
-}
-.radio-thumbnail > :checked + .thumbnail {
-  border: 4px solid #21BB05;
-  border-radius: 4px;
-}
-.radio-thumbnail > :checked + .thumbnail > span {
-  border-radius: 0;
-}
-.radio-thumbnail > :disabled + .thumbnail {
-  opacity: .5;
-}
-.radio-thumbnail > :checked + .thumbnail:before {
-  content: "\f00c";
-  font-family: fontawesome;
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 15px;
-  z-index: 1;
-  color: #fff;
-  background: #21bb05;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s all;
-}
-.thumbnail {
-  padding: 0;
-  margin: 0;
-  width: 192px;
-  height: 140px;
-  border: 0;
-  position: relative;
-}
-.thumbnail > span {
-  position: absolute;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-  /* IE6-9 */
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 97px 0 0 16px;
-  text-align: left;
-  border-radius: 4px;
-  border: 0;
-}
-.uxc__f-tags .btn.btn-default {
-  border-color: #fdb839;
-  background: transparent;
-  color: #fdb839;
-}
-.uxc__f-tags .btn {
-  margin-right: 15px;
-}
-.uxc__f-tags .btn.btn-default:hover,
-.uxc__f-tags .btn.btn-default:focus,
-.uxc__f-tags .btn.btn-default:active,
-.uxc__f-tags .btn.btn-default.active {
-  border-color: #fdb839;
-  background: #fdb839;
-  color: #fff;
-  box-shadow: 0px 0px 0px;
-  transition: all 0.3s;
-}
-label.btn.btn-default.active:before {
-  content: "\f00c";
-  font-family: fontawesome;
-  position: absolute;
-  top: 7px;
-  right: -10px;
-  font-size: 13px;
-  z-index: 1;
-  color: #fff;
-  background: #21bb05;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s all;
-}
-.f-cancel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #ABABAB;
-  border: 1px solid #ABABAB;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s;
-}
-.f-cancel:hover {
-  border-color: #fdb839;
-  color: #fdb839;
-  cursor: pointer;
-}
-.add-n-f {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px dotted #989898;
-  color: #989898;
-  border-radius: 4px;
-  margin: 0 30px 0 77px;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.add-n-f i {
-  border: 1px dotted #989898;
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-.add-n-f:hover {
-  border-color: #fdb839;
-  color: #fdb839;
-}
-.add-n-f:hover i {
-  color: #fdb839;
-  border-color: #fdb839;
-}
-    .handle {
-        color: #000;
-        cursor: move;
-        left: -8px;
-        width: 13px;
-        height: 40px;
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      .m-r-20{
+        margin-right: 20px;
+      }
+      .p-t-15{
+        padding-top: 15px;
+      }
+      .relative{
+        position: relative;
+      }
+      .timeline {
+        position: relative;
+        margin: 50px;
+        padding: 0;
+        list-style: none;
+        counter-reset: section;
+      }
+      .timeline:before {
+        content: '';
         position: absolute;
-        top: 16px;
-        background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.23) 1px, transparent 1px, transparent 100%);
-        background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-        background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-        background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-        -webkit-background-size: 3px 3px;
-        -moz-background-size: 3px 3px;
-        background-size: 3px 3px;
-    }
-    .timeline-placeholder{
-        height: 150px;
-        border: 2px dashed #ddd;
-        left: 71px;
-        top: -2px;
-    }
-    .timeline-placeholder:before{
-        left: -75px !important;
-    }
-    .timeline-placeholder:after {
-    content: "Drop it here";
-    text-align: center;
-    top: 23px;
-    position: relative;
-    font-size: 39px;
-    color: rgba(221, 221, 221, 0.38);
-}
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #fdb839;
+        left: 32px;
+        margin: 0;
+        border-radius: 2px;
+      }
+      .timeline > li {
+        position: relative;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        padding-top: 18px;
+        box-sizing: border-box;
+      }
+      .timeline > li:before,
+      .timeline > li:after {
+        display: block;
+      }
+      .ui-sortable-helper {
+        box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.08);
+        background: #fff;
+      }
+      .ui-sortable-helper .handle {
+        display: none;
+      }
+      .timeline > li:not(.ui-sortable-helper):before {
+        counter-increment: section;
+        content: counter(section);
+        background: #fdb839;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        left: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #Fff;
+        font-size: 22px;
+        font-weight: bold;
+        border: 15px solid #fff;
+        box-sizing: border-box;
+      }
+      .timeline > li:after {
+        clear: both;
+      }
+      .timeline > li > .timeline-item {
+        margin-top: 0;
+        color: #444;
+        margin-left: 60px;
+        margin-right: 15px;
+        padding: 0;
+      }
+      .timeline > li > .fa,
+      .timeline > li > .glyphicon,
+      .timeline > li > .ion {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        line-height: 30px;
+        position: absolute;
+        color: #fff;
+        background: #fdb839;
+        border-radius: 50%;
+        text-align: center;
+        left: 18px;
+        top: 0;
+      }
+      .radio-thumbnail > label {
+        border-radius: 4px;
+      }
+      .radio-thumbnail > input {
+        display: none;
+      }
+      .radio-thumbnail > :checked + .thumbnail {
+        border: 4px solid #21BB05;
+        border-radius: 4px;
+      }
+      .radio-thumbnail > :checked + .thumbnail > span {
+        border-radius: 0;
+      }
+      .radio-thumbnail > :disabled + .thumbnail {
+        opacity: .5;
+      }
+      .radio-thumbnail > :checked + .thumbnail:before {
+        content: "\f00c";
+        font-family: fontawesome;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 15px;
+        z-index: 1;
+        color: #fff;
+        background: #21bb05;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s all;
+      }
+      .thumbnail {
+        padding: 0;
+        margin: 0;
+        width: 192px;
+        height: 140px;
+        border: 0;
+        position: relative;
+      }
+      .thumbnail > span {
+        position: absolute;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        /* IE6-9 */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 97px 0 0 16px;
+        text-align: left;
+        border-radius: 4px;
+        border: 0;
+      }
+      .uxc__f-tags .btn.btn-default {
+        border-color: #fdb839;
+        background: transparent;
+        color: #fdb839;
+      }
+      .uxc__f-tags .btn {
+        margin-right: 15px;
+      }
+      .uxc__f-tags .btn.btn-default:hover,
+      .uxc__f-tags .btn.btn-default:focus,
+      .uxc__f-tags .btn.btn-default:active,
+      .uxc__f-tags .btn.btn-default.active {
+        border-color: #fdb839;
+        background: #fdb839;
+        color: #fff;
+        box-shadow: 0px 0px 0px;
+        transition: all 0.3s;
+      }
+      label.btn.btn-default.active:before {
+        content: "\f00c";
+        font-family: fontawesome;
+        position: absolute;
+        top: 7px;
+        right: -10px;
+        font-size: 13px;
+        z-index: 1;
+        color: #fff;
+        background: #21bb05;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s all;
+      }
+      .f-cancel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #ABABAB;
+        border: 1px solid #ABABAB;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+      }
+      .f-cancel:hover {
+        border-color: #fdb839;
+        color: #fdb839;
+        cursor: pointer;
+      }
+      .add-n-f {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted #989898;
+        color: #989898;
+        border-radius: 4px;
+        margin: 0 30px 0 77px;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .add-n-f i {
+        border: 1px dotted #989898;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .add-n-f:hover {
+        border-color: #fdb839;
+        color: #fdb839;
+      }
+      .add-n-f:hover i {
+        color: #fdb839;
+        border-color: #fdb839;
+      }
+          .handle {
+              color: #000;
+              cursor: move;
+              left: -8px;
+              width: 13px;
+              height: 40px;
+              position: absolute;
+              top: 16px;
+              background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.23) 1px, transparent 1px, transparent 100%);
+              background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+              background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+              background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+              -webkit-background-size: 3px 3px;
+              -moz-background-size: 3px 3px;
+              background-size: 3px 3px;
+          }
+          .timeline-placeholder{
+              height: 150px;
+              border: 2px dashed #ddd;
+              left: 71px;
+              top: -2px;
+          }
+          .timeline-placeholder:before{
+              left: -75px !important;
+          }
+          .timeline-placeholder:after {
+          content: "Drop it here";
+          text-align: center;
+          top: 23px;
+          position: relative;
+          font-size: 39px;
+          color: rgba(221, 221, 221, 0.38);
+      }
 
-  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable li span { position: absolute; margin-left: -1.3em; }
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
 
-.timeline:before{
-  background: #c4233d;
-}
-.timeline > li:not(.ui-sortable-helper):before{
-  background:#c4233d;
+      .timeline:before{
+        background: #c4233d;
+      }
+      .timeline > li:not(.ui-sortable-helper):before{
+        background:#c4233d;
 
-}
+      }
 
-/*=================================================================
-Override Bootstrap Tabs
-==================================================================*/
 
-/* Tabs panel */
-.tabbable-panel {
-  padding: 10px;
-}
 
-.tabbable-line > .nav-tabs {
-  border: none;
-  margin: 0px;
-  display: flex;
-  justify-content: space-between;
-}
-.tabbable-line > .nav-tabs > li {
-  margin: 0px 2px 2px 0;
-  transition: 0.5s ease;
-}
-.tabbable-line > .nav-tabs > li > a {
-  border: 0;
-  margin-right: 0;
-  color: #A9A9A9;
-  padding : 4px 0px;
-}
-.tabbable-line > .nav-tabs > li > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid @warning-dark;
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-  border: 0;
-  background: none !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #fdb839;
-  position: relative;
-  transition: 0.5s ease;
-}
-.tabbable-line > .nav-tabs > li.active > a {
-  border: 0;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
-  color: #404040;
-}
-.tabbable-line > .tab-content {
-  margin-top: -3px;
-  background-color: #fff;
-  border: 0;
-  border-top: 1px solid #eee;
-  padding: 15px 0;
-}
-.portlet .tabbable-line > .tab-content {
-  padding-bottom: 0;
-}
-.input{
-  border-radius: 20px;
+      /*=================================================================
+      Override Bootstrap Tabs
+      ==================================================================*/
 
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.tabbable-line > .nav-tabs > li.active{
-  border-bottom: 4px solid #c4233d;
+      /* Tabs panel */
+      .tabbable-panel {
+        padding: 10px;
+      }
 
-}
-.container{
-  max-width:100vh;
-}
-.but{
-  background:#C8C8C8	;
-}
+      .tabbable-line > .nav-tabs {
+        border: none;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .tabbable-line > .nav-tabs > li {
+        margin: 0px 2px 2px 0;
+        transition: 0.5s ease;
+      }
+      .tabbable-line > .nav-tabs > li > a {
+        border: 0;
+        margin-right: 0;
+        color: #A9A9A9;
+        padding : 4px 0px;
+      }
+      .tabbable-line > .nav-tabs > li > a > i {
+        color: #a6a6a6;
+      }
+      .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+        border-bottom: 4px solid @warning-dark;
+      }
+      .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+        border: 0;
+        background: none !important;
+        color: #333333;
+      }
+      .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+        color: #a6a6a6;
+      }
+      .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+        margin-top: 0px;
+      }
+      .tabbable-line > .nav-tabs > li.active {
+        border-bottom: 4px solid #fdb839;
+        position: relative;
+        transition: 0.5s ease;
+      }
+      .tabbable-line > .nav-tabs > li.active > a {
+        border: 0;
+        color: #333333;
+      }
+      .tabbable-line > .nav-tabs > li.active > a > i {
+        color: #404040;
+      }
+      .tabbable-line > .tab-content {
+        margin-top: -3px;
+        background-color: #fff;
+        border: 0;
+        border-top: 1px solid #eee;
+        padding: 15px 0;
+      }
+      .portlet .tabbable-line > .tab-content {
+        padding-bottom: 0;
+      }
+      .input{
+        border-radius: 20px;
+
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .tabbable-line > .nav-tabs > li.active{
+        border-bottom: 4px solid #c4233d;
+
+      }
+      .container{
+        max-width:100vh;
+      }
+      .but{
+        background:#C8C8C8	;
+      }
+      .tab{
+        width: 700px;
+      }
+      .timeline > li > .timeline-item{
+        margin-right: -115;
+        direction: rtl;
+      }
+      .timeline{
+        margin:-83;
+      }
 </style>
   <body>
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
     <main>
-
       <!-- ============================================-->
       <!-- Preloader ==================================-->
       <div id="preloader">
         <div class="loader"><span></span><span></span><span></span><span></span></div>
       </div>
-      <!--****************************************** modal ****************************************************************** -->
+<!--****************************************** modal ************************************************ -->
      <div class="modal" id="myModal" tabindex="-1" role="dialog" >
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -606,8 +618,7 @@ input[type=number]::-webkit-outer-spin-button {
         <!-- end of .container-->
       </section>
       <!-- <section> close ============================-->
-  <!-- =========================*********************************** *مبادرات بداية *****************************===================-->
-
+<!-- =========================**************** *مبادرات بداية ************************===================-->
            <div class="page position-absolute t-0 w-100" id="about">
              <div class="row no-gutters minh-100vh">
                <div class="col-lg-9 order-1 order-lg-0 page-content pt-6 pt-lg-0">
@@ -621,11 +632,10 @@ input[type=number]::-webkit-outer-spin-button {
                            <h2 class="fs-2 fs-sm-3"> <span class="font-weight-medium">مبادرات </span> </h2>
                            <hr class="hr-ornate" />
                          </div>
-
                        </div>
                      </div>
                      <!--start of sortable -->
-                     <ul class="timeline ui-sortable">
+                     <ul class="timeline ui-sortable" >
                        <li class="ui-sortable-handle">
                          <span class="handle"></span>
                          <div class="timeline-item relative">
@@ -676,10 +686,9 @@ input[type=number]::-webkit-outer-spin-button {
                                            </div>
                                          </form>
                                            <div class="row-fluid m-t-20">
-
                                            </div>
                                        </div>
-                                       <!--************tab2  **********************-->
+                                       <!--************ tab2 **********************-->
                                        <div class="tab-pane" id="rf_tab_2">
                                          <form>
                                    <div class="form-group row">
@@ -737,78 +746,76 @@ input[type=number]::-webkit-outer-spin-button {
                                    </div>
                                  </form>
                                </div>
-                                       <!--**********************tab3 ********************** -->
-                                       <div class="tab-pane" id="rf_tab_3">
-                                         <form class="needs-validation" novalidate>
-     <div class="form-row">
-       <div class="col-md-4 mb-3">
-         <label for="validationTooltip01">First name</label>
-         <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-         <div class="valid-tooltip">
-           Looks good!
-         </div>
-       </div>
-       <div class="col-md-4 mb-3">
-         <label for="validationTooltip02">Last name</label>
-         <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
-         <div class="valid-tooltip">
-           Looks good!
-         </div>
-       </div>
-       <div class="col-md-4 mb-3">
-         <label for="validationTooltipUsername">Username</label>
-         <div class="input-group">
-           <div class="input-group-prepend">
-             <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-           </div>
-           <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
-           <div class="invalid-tooltip">
-             Please choose a unique and valid username.
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="form-row">
-       <div class="col-md-6 mb-3">
-         <label for="validationTooltip03">City</label>
-         <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
-         <div class="invalid-tooltip">
-           Please provide a valid city.
-         </div>
-       </div>
-       <div class="col-md-3 mb-3">
-         <label for="validationTooltip04">State</label>
-         <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
-         <div class="invalid-tooltip">
-           Please provide a valid state.
-         </div>
-       </div>
-       <div class="col-md-3 mb-3">
-         <label for="validationTooltip05">Zip</label>
-         <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
-         <div class="invalid-tooltip">
-           Please provide a valid zip.
-         </div>
-       </div>
-     </div>
-     <button class="btn btn-primary" type="submit">Submit form</button>
-   </form>
-                             </div>
-                                       <div class="clearfix"></div>
+                               <!--**********************tab3 ********************** -->
+                                <div class="tab-pane" id="rf_tab_3">
+                                  <form class="needs-validation" novalidate>
+                                   <div class="form-row">
+                                     <div class="col-md-4 mb-3">
+                                       <label for="validationTooltip01">First name</label>
+                                       <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                       <div class="valid-tooltip">
+                                         Looks good!
+                                       </div>
+                                     </div>
+                                     <div class="col-md-4 mb-3">
+                                       <label for="validationTooltip02">Last name</label>
+                                       <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                                       <div class="valid-tooltip">
+                                         Looks good!
+                                       </div>
+                                     </div>
+                                     <div class="col-md-4 mb-3">
+                                       <label for="validationTooltipUsername">Username</label>
+                                       <div class="input-group">
+                                         <div class="input-group-prepend">
+                                           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                         </div>
+                                         <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                                         <div class="invalid-tooltip">
+                                           Please choose a unique and valid username.
+                                         </div>
+                                       </div>
+                                     </div>
                                    </div>
-                                   <div class="clearfix"></div>
-                               </div>
-                               <div class="clearfix"></div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
+                                   <div class="form-row">
+                                     <div class="col-md-6 mb-3">
+                                       <label for="validationTooltip03">City</label>
+                                       <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                                       <div class="invalid-tooltip">
+                                         Please provide a valid city.
+                                       </div>
+                                     </div>
+                                     <div class="col-md-3 mb-3">
+                                       <label for="validationTooltip04">State</label>
+                                       <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                                       <div class="invalid-tooltip">
+                                         Please provide a valid state.
+                                       </div>
+                                     </div>
+                                     <div class="col-md-3 mb-3">
+                                       <label for="validationTooltip05">Zip</label>
+                                       <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                                       <div class="invalid-tooltip">
+                                         Please provide a valid zip.
+                                       </div>
+                                     </div>
+                                   </div>
+                                   <button class="btn btn-primary" type="submit">Submit form</button>
+                                 </form>
+                                                           </div>
+                                                                     <div class="clearfix"></div>
+                                                                 </div>
+                                                                 <div class="clearfix"></div>
+                                                             </div>
+                                                             <div class="clearfix"></div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
 
-           <!-- END timeline item -->
-       </ul>
-
+                                             <!-- END timeline item -->
+                      </ul>
                    </div>
-                   <!-- end of .container-->
                  </section>
 
                  <!-- <section> close ============================-->
@@ -851,7 +858,7 @@ input[type=number]::-webkit-outer-spin-button {
             <section class="pt-5 pt-xl-7 pt-xxl-8">
               <div class="container-fluid">
                 <div class="row justify-content-center">
-                  <div class="col-lg-10">
+                  <div class="col-lg-12">
                     <div class="text-center mb-5 mb-lg-6">
                       <h2 class="fs-2 fs-sm-3"> <span class="font-weight-medium">تقييمات  </span> </h2>
                       <hr class="hr-ornate" />
@@ -970,164 +977,82 @@ input[type=number]::-webkit-outer-spin-button {
                                       <!--************tab2  **********************-->
                                       <div class="tab-pane" id="rf_tab_16">
                                         <div class="row mt-3">
-                         <table  class="table table-bordered wow bounceIn" >
-                           <thead >
-                             <tr style="background:grey;color:white;">
-                                <th style="text-align: center;">#</th>
-                                <th style="text-align: center;">المجال </th>
-                                <th style="text-align: center;">التقييم من 5</th>
-                             </tr>
-                          </thead>
-                          <tbody>
-                           <tr style="background-color:white">
-                               <th scope="row">1</th>
-                               <td ><p>يوفر المشغل للمتدرب المعلومات المطلوبة للمهام المنفذة</p></td>
-                               <td style="text-align: center;">
-                                 <div>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                    <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                    <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                    <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                    <label for="contactChoice3" style="margin-left:20px;">5</label>
-                                </div>
-                               </td>
-                            </tr>
-                              <th style="background:#F0F0F0"scope="row" >2</th>
-                              <td style="background:#F0F0F0"><p>يقوم المشغل بتكليف المتدرب بمهام مناسبة للتخصص ومتماشية مع خطة التدريب على رأس العمل</p></td>
-                              <td style="text-align: center;background:#F0F0F0">
-                                 <div>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                    <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                    <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                    <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                    <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                    <label for="contactChoice3" style="margin-left:20px;">5</label>
-                                </div>
-                              </td>
-                            </tr>
-                            </tr>
-                            <tr  style="background-color:white">
-                              <th scope="row">3</th>
-                              <td ><p>تتم الاستفادة بشكل واضح من عملية التدريب لدى المشغل</p></td>
-                              <td style="text-align: center;">
-                                <div>
-                                   <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                   <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                   <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                   <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                   <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                   <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                   <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                   <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                   <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                   <label for="contactChoice3" style="margin-left:20px;">5</label>
-                               </div>
-                              </td>
+                                           <table  class="table table-bordered wow bounceIn" >
+                                             <thead >
+                                               <tr style="background:grey;color:white;">
+                                                  <th style="text-align: center;">#</th>
+                                                  <th style="text-align: center;">السؤال </th>
+                                                  <th style="text-align: center;">التقييم من 5</th>
+                                               </tr>
+                                            </thead>
+                                            <tbody>
+                                             <tr style="background-color:white">
+                                                 <th scope="row">1</th>
+                                                 <td ><p>	هل تعتقد أن مشاركتك في تنفيذ أنشطة المبادرة   أثر على مفاهيمك تجاه دورك في التغيير المجتمعي ك مواطن فاعل </p></td>
+                                                 <td style="text-align: center;">
+                                                   <div>
+                                                      <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                      <label for="contactChoice1" style="margin-left:20px;">نعم </label>
+                                                      <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                      <label for="contactChoice1" style="margin-left:20px;">لا </label>
+                                                  </div>
+                                                  <div class="">
+                                                    <textarea name="name" rows="4" cols="50" placeholder="وضح"></textarea>
+                                                  </div>
+                                                 </td>
+                                              </tr>
+                                                <th style="background:#F0F0F0"scope="row" >2</th>
+                                                <td style="background:#F0F0F0">	بعد مشاركتكم في المبادرة هل زادت قناعتك بقدرتك على التأثير على ظروف العيش </p></td>
+                                                <td style="text-align: center;background:#F0F0F0">
+                                                  <div>
+                                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                     <label for="contactChoice1" style="margin-left:20px;">نعم </label>
+                                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                     <label for="contactChoice1" style="margin-left:20px;">لا </label>
+                                                 </div>
+                                                 <div class="">
+                                                   <textarea name="name" rows="4" cols="50" placeholder="وضح"></textarea>
+                                                 </div>
+                                                </td>
+                                              </tr>
+                                              </tr>
+                                              <tr  style="background-color:white">
+                                                <th scope="row">3</th>
+                                                <td ><p>	هل ستستمر بالعمل بشكل تطوعي للتأثير على ظروف العيش داخل المخيم</p></td>
+                                                <td style="text-align: center;">
+                                                  <div>
+                                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                     <label for="contactChoice1" style="margin-left:20px;">نعم </label>
+                                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                                     <label for="contactChoice1" style="margin-left:20px;">لا </label>
+                                                 </div>
+                                                 <div class="">
+                                                   <textarea name="name" rows="4" cols="50" placeholder="وضح"></textarea>
+                                                 </div>
+                                                </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row" style="background:#F0F0F0">4</th>
+                                      <td style="background:#F0F0F0"><p>	هل تعتقد ان مثل هذه المبادرات يساهم في تحسين ظروف العيش داخل المخيم </p></td>
+                                      <td  style="text-align: center;background:#F0F0F0">
+                                        <div>
+                                           <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                           <label for="contactChoice1" style="margin-left:20px;">نعم </label>
+                                           <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
+                                           <label for="contactChoice1" style="margin-left:20px;">لا </label>
+                                       </div>
+                                       <div class="">
+                                         <textarea name="name" rows="4" cols="50" placeholder="وضح"></textarea>
+                                       </div>
+                                        </div>
+                                      </td>
+                                    </tr>
 
-                              </tr>
-                              <tr>
-                                <th scope="row" style="background:#F0F0F0">4</th>
-                                <td style="background:#F0F0F0"><p>يقوم المشغل بتوجيه وارشاد الطالب لتحسين أدائه بما يتماشى مع خطة التدريب على رأس العمل </p></td>
-                                <td  style="text-align: center;background:#F0F0F0">
-                                   <div>
-                                      <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                      <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                      <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                      <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                      <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                      <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                      <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                      <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                      <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                      <label for="contactChoice3" style="margin-left:20px;">5</label>
+
+                                     </tbody>
+                                    </table>
                                   </div>
-                                </td>
-                              </tr>
-                              <tr  style="background-color:white">
-                                <th scope="row">5</th>
-                                <td ><p>يوجد مشرف مباشر تم تعيينه من المشغل ويمارس دوره في الاشراف على الطالب</p></td>
-                                <td style="text-align: center;">
-                                  <div>
-                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                     <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                     <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                     <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                     <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                     <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                     <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                     <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                     <label for="contactChoice3" style="margin-left:20px;">5</label>
-                                 </div>
-                               </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row"style="background:#F0F0F0" >6</th>
-                                  <td style="background:#F0F0F0"><p>يتم التعامل مع المتدرب وفق أخلاقيات العمل</p></td>
-                                  <td class="table-info" style="text-align: center;background:#F0F0F0">
-                                     <div>
-                                        <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                        <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                        <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                        <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                        <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                        <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                        <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                        <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                        <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                        <label for="contactChoice3" style="margin-left:20px;">5</label>
                                     </div>
-                                  </td>
-                                </tr>
-                                <tr  style="background-color:white">
-                                  <th scope="row">7</th>
-                                  <td ><p>يوجد لدى المشغل قوانين وضوابط تحدد مهام المشغل والمتدرب</p></td>
-                                  <td style="text-align: center;">
-                                    <div>
-                                       <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                       <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                       <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                       <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                       <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                       <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                       <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                       <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                       <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                       <label for="contactChoice3" style="margin-left:20px;">5</label>
-                                   </div>
-                                 </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row" style="background:#F0F0F0">8</th>
-                                    <td style="background:#F0F0F0"><p>تتوفر بيئة تشاركية تعلمية لدى المشغل</p></td>
-                                    <td  style="text-align: center;background:#F0F0F0">
-                                       <div>
-                                          <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                          <label for="contactChoice1" style="margin-left:20px;">1</label>
-                                          <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                          <label for="contactChoice1" style="margin-left:20px;">2 </label>
-                                          <input type="radio" id="contactChoice1" name="contact" value="email" class="wow bounceInUp"  required>
-                                          <label for="contactChoice1" style="margin-left:20px;">3</label>
-                                          <input type="radio" id="contactChoice2"name="contact" value="phone" class="wow bounceInUp" >
-                                          <label for="contactChoice2" style="margin-left:20px;">4</label>
-                                          <input type="radio" id="contactChoice3" name="contact" value="mail" class="wow bounceInUp" >
-                                          <label for="contactChoice3" style="margin-left:20px;">5</label>
-                                      </div>
-                                    </td>
-                                  </tr>
-                               </tbody>
-                              </table>
-                            </div>
-                              </div>
                                       <!--**********************tab3 ********************** -->
                                       <div class="tab-pane" id="rf_tab_17">
                                         <form>
